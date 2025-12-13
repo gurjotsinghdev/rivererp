@@ -142,11 +142,7 @@ export const testimonialsHero = {
   copy: 'Signals from customers using River ERP to go live on ERPNext with speed and control.',
   ctaLabel: 'Book Consultation'
 };
-export const testimonialsPage = [
-  '“River ERP handled setup, plugins, and training—our teams used it day one.”',
-  '“Predictable rollout, no enterprise bloat. Demo to production in weeks.”',
-  '“Single CTA via Calendly made stakeholder engagement easy.”'
-];
+export const testimonialsPage = testimonials;
 
 export const footerColumns = [
   {
