@@ -517,6 +517,23 @@ main {
   color: #ffffff;
 }
 
+.calendly-section {
+  max-width: 1200px;
+  
+  scroll-margin-top: 100px;
+}
+
+.calendly-section h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+
+.calendly-section p {
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+
 .testimonial-static {
   display: grid;
   gap: 16px;

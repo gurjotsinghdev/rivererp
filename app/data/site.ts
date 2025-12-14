@@ -1,4 +1,4 @@
-export const calendlyUrl = 'https://calendly.com/river-erp/consultation';
+export const calendlyUrl = '/book-consultation';
 export const navPhone = '+1 (555) 123-4567';
 
 export const logos = [
