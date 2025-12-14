@@ -230,10 +230,11 @@ main {
 }
 
 .hero-actions {
-  display: inline-flex;
+  display: flex;
   gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
 }
 
 .hero-visual {
@@ -352,12 +353,53 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: flex-start;
+  align-items: flex-end;
+  text-align: right;
+  margin-left: auto;
+  align-self: flex-start;
+}
+
+.about-alt-cta.top-align {
+  justify-content: flex-start;
 }
 
 .about-alt-timeline {
   display: grid;
   gap: 14px;
+}
+
+.about-cta-note {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.about-reasons {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #f7f8fb;
+  display: grid;
+  gap: 8px;
+}
+
+.about-reasons-list {
+  margin: 0;
+  padding-left: 18px;
+  color: #111827;
+  line-height: 1.5;
+}
+
+.risk-section {
+  display: grid;
+  gap: 12px;
+}
+
+.risk-list {
+  margin: 0;
+  padding-left: 18px;
+  color: #111827;
+  line-height: 1.6;
 }
 
 .about-step {

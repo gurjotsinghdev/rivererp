@@ -21,10 +21,10 @@ export default function IndustriesPage() {
         />
         <FeatureGrid
           title="Pre-built industry accelerators"
-          copy="Switch on, preview in demo, then promote."
+          copy="Preview in a sandbox, adjust with us, then promote only after it fits your numbers."
           items={industryCards}
         />
-        <CTA label="Book Consultation" href={calendlyUrl} />
+        <CTA label="Book Demo" href={calendlyUrl} />
       </main>
       <Footer />
     </>

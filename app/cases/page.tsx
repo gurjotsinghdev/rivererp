@@ -20,7 +20,7 @@ export default function CasesPage() {
           ctaHref={calendlyUrl}
         />
         <FeatureGrid title="Recent work" copy={casesCopy} items={caseCards} />
-        <CTA label="Book Consultation" href={calendlyUrl} />
+        <CTA label="Review a similar migration" href={calendlyUrl} />
       </main>
       <Footer />
     </>

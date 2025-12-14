@@ -18,7 +18,7 @@ export default function TestimonialsPage() {
           ctaHref={calendlyUrl}
         />
         <TestimonialsGrid quotes={testimonialsPage} copy={testimonialsCopy} />
-        <CTA label="Book Consultation" href={calendlyUrl} />
+        <CTA label="Talk through your migration risks" href={calendlyUrl} />
       </main>
       <Footer />
     </>

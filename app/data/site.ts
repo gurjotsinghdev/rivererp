@@ -2,23 +2,21 @@ export const calendlyUrl = '/book-consultation';
 export const navPhone = '+1 (555) 123-4567';
 
 export const logos = [
-  { name: 'Harbor Inn', href: 'https://example.com/harbor-inn', city: 'Boston', country: 'USA', industry: 'Hospitality' },
-  { name: 'Grandline Hotel', href: 'https://example.com/grandline-hotel', city: 'Toronto', country: 'Canada', industry: 'Hospitality' },
-  { name: 'Vista Suites', href: 'https://example.com/vista-suites', city: 'Berlin', country: 'Germany', industry: 'Hospitality' },
-  { name: 'Lakeside Lodge', href: 'https://example.com/lakeside-lodge', city: 'Zurich', country: 'Switzerland', industry: 'Hospitality' },
-  { name: 'Skyline Motel', href: 'https://example.com/skyline-motel', city: 'Austin', country: 'USA', industry: 'Travel' },
-  { name: 'Coastal Stay', href: 'https://example.com/coastal-stay', city: 'Sydney', country: 'Australia', industry: 'Hospitality' },
-  { name: 'The Villager Inn', href: 'https://example.com/villager-inn', city: 'Dublin', country: 'Ireland', industry: 'Hospitality' },
-  { name: 'Hope Motel', href: 'https://example.com/hope-motel', city: 'Cape Town', country: 'South Africa', industry: 'Travel' }
+  { name: 'The Village Inn', href: 'https://example.com/the-village-inn', city: 'Princeton', country: 'Canada', industry: 'Hospitality' },
+  { name: 'Global Grocers', href: 'https://example.com/global-grocers', city: 'Penticton', country: 'Canada', industry: 'Retail' },
+  { name: 'Stargazer Inn and Suites', href: 'https://example.com/stargazer-inn', city: 'Monterey', country: 'USA', industry: 'Hospitality' },
+  { name: 'Shuaiba Industrial Company', href: 'https://example.com/shuaiba-industrial', city: 'Dubai', country: 'UAE', industry: 'Manufacturing' },
+  { name: 'Memor Perfumes', href: 'https://example.com/memor-perfumes', city: 'Bengaluru', country: 'India', industry: 'Retail' },
+  { name: 'CNC', href: 'https://example.com/cnc', city: 'Prince George', country: 'Canada', industry: 'Manufacturing' }
 ];
 
 export const hero = {
-  tag: 'Build and deploy ERP on the ERPNext Cloud',
-  title: 'Build and launch ERP on the cloud, without the bloat.',
+  tag: 'ERPNext delivery tailored for tech, education, retail/wholesale, and manufacturing.',
+  title: 'Switch ERPs without risking your data or budget.',
   copy:
-    'River ERP mirrors the Vercel mindset for ERPNext: fast spin-up, clean UX, and predictable rollout—demo to production in one motion. One CTA: Book Consultation.',
-  tagline: 'Flexible enterprise ERP for your business.',
-  ctaLabel: 'Book Consultation'
+    'If your current ERP is expensive, slow to change, or poorly supported, we move you to ERPNext with validation, rollback points, and on-call support you can see in the plan. You leave the first call with a draft migration approach, cost outline, and the fit for your industry.',
+  tagline: 'Already on an ERP? We move you with checks, not leaps.',
+  ctaLabel: 'Get Migration Plan'
 };
 
 export const poweredItems = [
@@ -40,7 +38,7 @@ export const featureCards = [
   { title: 'Data migration', description: 'Structured imports for masters and transactions.', tag: 'Migration' },
   { title: 'Change management', description: 'Training, playbooks, and comms for adoption.', tag: 'Enablement' }
 ];
-export const featureCopy = 'Everything needed to launch and run ERP on ERPNext without wrestling infrastructure.';
+export const featureCopy = 'ERPNext set up for finance, ops, and owners without you hosting servers or chasing vendors for small changes.';
 
 export const pipelineSteps = [
   'Spin $5 instance on app.rivererp.com',
@@ -80,7 +78,7 @@ export const testimonials = [
     href: 'https://example.com/vista-suites-case'
   }
 ];
-export const testimonialsCopy = 'Signals from teams that shipped faster with River ERP.';
+export const testimonialsCopy = 'Straightforward notes from teams about what improved after switching and what took work.';
 
 export const faqs = [
   { q: 'Is this a demo or production?', a: 'Both. Start in demo, promote to production with the same playbook after sign-off.' },
@@ -90,57 +88,86 @@ export const faqs = [
 ];
 
 export const aboutHero = {
-  tag: 'About River ERP',
-  title: 'Opinionated ERP delivery on ERPNext.',
+  title: 'Why teams switch to River ERP',
   copy:
-    'River ERP pairs an open ERPNext core with a fast, playbook-driven implementation: sandboxes, plugins, data migration, governance, and change management.',
-  ctaLabel: 'Book Consultation'
+    'You already have an ERP. You need clarity, not hype. We design a migration you can see, test with your data, and approve only when it works for finance, ops, and your frontline teams.',
+  ctaLabel: 'Get Migration Plan'
 };
 export const aboutCopy =
-  'Full-service ERP delivery: discovery, configuration, plugins, migration, training, and cutover. One team owns the outcomes.';
+  'We focus on the pains you feel: high costs, slow changes, weak support, and data you cannot trust. We fix those first, then migrate with controls, parallel runs, and clear ownership after go-live.';
 export const aboutFeatures = [
-  { title: 'Discovery & design', description: 'Process mapping, roles, and success metrics up front.' },
-  { title: 'Configuration & plugins', description: 'ERPNext core plus River ERP layers switched on for your domain.' },
-  { title: 'Data migration', description: 'Masters, balances, and transactional loads with QA and rollback points.' },
-  { title: 'Training & change', description: 'Role-based enablement, playbooks, and comms to drive adoption.' },
-  { title: 'Governance & controls', description: 'Approvals, security, and compliance baked into rollout.' },
-  { title: 'Cutover & optimization', description: 'Cutover support with post-launch tuning and roadmap.' }
+  {
+    title: 'Document what broke before',
+    description: 'Costs, slow changes, bad support, and data quality issues captured so we do not repeat them. You see the list and the mitigation for each.'
+  },
+  {
+    title: 'Prove critical work in a sandbox',
+    description: 'Your approval flows, invoices, inventory moves, and reports tested with your sample data before we proceed.'
+  },
+  {
+    title: 'Map roles and controls',
+    description: 'Access, approvals, and audit trails set to match how finance, ops, and owners need to govern, including industry-specific compliance needs.'
+  },
+  {
+    title: 'Migrate with checkpoints',
+    description: 'Masters and transactions moved in batches with validation, reconciliation, and rollback options.'
+  },
+  {
+    title: 'Run both systems briefly',
+    description: 'Parallel run with your current ERP until balances, reports, and day-to-day tasks agree, so teams are never blind.'
+  },
+  {
+    title: 'Cut over with support on-call',
+    description: 'Planned go-live window, named contacts, and post-go-live fixes owned by the same team.'
+  }
+];
+export const switchReasons = [
+  'ERP bills are climbing while change requests stall or cost extra.',
+  'Data has been mishandled before and you want clear validation with rollback.',
+  'Support after go-live has been slow or unresponsive and you need named owners.',
+  'You need predictable pricing with unlimited users, not per-seat surprises.',
+  'You want ERPNext flexibility without lock-in if it is not a fit for your industry.'
+];
+export const riskPoints = [
+  'Run River ERP in parallel with your current ERP until numbers match.',
+  'Validate every migration batch and keep rollback points ready.',
+  'Use a sandbox with your data; no lock-in until you approve go-live.',
+  'Support continues after go-live for stabilization, fixes, and small changes.'
 ];
 
 export const industriesHero = {
   tag: 'Industries',
-  title: 'Plugin layers for every domain.',
-  copy: 'River ERP ships domain-specific configurations on ERPNext so you launch with confidence.',
-  ctaLabel: 'Book Consultation'
+  title: 'Configured for the industries we know well.',
+  copy: 'Preview ERPNext in a sandbox with your data and flows for your specific industry before any migration decision.',
+  ctaLabel: 'Book Demo'
 };
 export const industriesList = [
-  'Manufacturing & inventory',
-  'Services & projects',
-  'Education: School & College',
-  'Ecommerce & retail',
-  'Company Ops & HR',
-  'Finance & approvals'
+  'Tech companies',
+  'Schools & Universities',
+  'Wholesalers & Retail',
+  'Manufacturing'
 ];
-export const industriesCopy = 'Plugin-ready, demo-tested, production-safe.';
+export const industriesCopy =
+  'Industry playbooks for approvals, billing, inventory, and reporting—trialed in a sandbox with your sample data, adjusted together, then promoted only when numbers align.';
 
 export const casesHero = {
   tag: 'Case studies',
   title: 'Demo to production playbooks.',
-  copy: 'See how teams used River ERP to ship faster on ERPNext with predictable governance.',
-  ctaLabel: 'Book Consultation'
+  copy: 'Walk through similar migrations to see how risk, data, and support were handled.',
+  ctaLabel: 'Review a similar rollout'
 };
 export const cases = [
   { title: 'Multi-entity rollout', detail: 'Sandbox to production with shared plugins and governance.' },
   { title: 'Education stack', detail: 'Admissions, fees, attendance, and parent portals on ERPNext.' },
   { title: 'Commerce + Ops', detail: 'Ecommerce storefront to fulfillment with inventory controls.' }
 ];
-export const casesCopy = 'Reusable blueprints you can apply.';
+export const casesCopy = 'See where migrations went smoothly, where they did not, and how we corrected course.';
 
 export const testimonialsHero = {
   tag: 'Testimonials',
   title: 'Proof from teams that shipped faster.',
-  copy: 'Signals from customers using River ERP to go live on ERPNext with speed and control.',
-  ctaLabel: 'Book Consultation'
+  copy: 'Hear what worked and what was hard for teams that switched to River ERP.',
+  ctaLabel: 'Talk with the delivery lead'
 };
 export const testimonialsPage = testimonials;
 
@@ -159,4 +186,4 @@ export const footerColumns = [
   }
 ];
 
-export const footerNote = 'Flexible enterprise ERP for your business.';
+export const footerNote = 'ERPNext delivery with clear plans, validation, and steady support.';

@@ -19,7 +19,9 @@ import {
   testimonials,
   testimonialsCopy,
   faqs,
-  logos
+  logos,
+  switchReasons,
+  riskPoints
 } from './data/site';
 
 export default function Page() {
@@ -28,7 +30,6 @@ export default function Page() {
       <Nav />
       <main>
         <Hero
-          tag={hero.tag}
           title={hero.title}
           copy={hero.copy}
           tagline={hero.tagline}
@@ -38,7 +39,28 @@ export default function Page() {
 
         <LogoSlider logos={logos} />
 
-        <AboutSection title="End-to-end ERP delivery" copy={aboutCopy} items={aboutFeatures} />
+        <AboutSection
+          title="ERPNext delivery for teams that need a careful switch"
+          copy={aboutCopy}
+          items={aboutFeatures}
+          reasons={switchReasons}
+          ctaLabel="Book Demo"
+        />
+
+        <section className="section panel-section risk-section">
+          <h2>Risk reduction, spelled out</h2>
+          <p>
+            We know switching ERPs is scary. Here is exactly how we lower risk before and after go-live.
+          </p>
+          <ul className="risk-list">
+            {riskPoints.map(point => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
+          <a className="cta" href={calendlyUrl} target="_blank" rel="noopener noreferrer">
+            See how we move your data safely
+          </a>
+        </section>
 
         <FeatureGrid
           id="industries"

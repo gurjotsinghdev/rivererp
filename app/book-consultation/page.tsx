@@ -18,7 +18,7 @@ export default function BookConsultationPage() {
           />
         </section>
 
-        <CTA label="Book Consultation" href="#calendly-inline" />
+        <CTA label="See available times" href="#calendly-inline" />
       </main>
       <Footer />
       <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="afterInteractive" />

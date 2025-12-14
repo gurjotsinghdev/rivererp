@@ -10,22 +10,23 @@ interface AboutSectionProps {
   title: string;
   copy: string;
   items: Item[];
+  reasons: string[];
+  ctaLabel?: string;
 }
 
-export default function AboutSection({ title, copy, items }: AboutSectionProps) {
+export default function AboutSection({ title, copy, items, reasons, ctaLabel = 'Get Migration Plan' }: AboutSectionProps) {
   return (
     <section className="section panel-section about-alt" id="about">
       <div className="about-alt-header">
         <div>
-          <div className="tag">About River ERP</div>
           <h2>{title}</h2>
           <p>{copy}</p>
         </div>
-        <div className="about-alt-cta">
-          <div className="pill" style={{ width: 'fit-content' }}>One CTA: Book Consultation</div>
+        <div className="about-alt-cta top-align">
           <a className="cta" href={calendlyUrl} target="_blank" rel="noopener noreferrer">
-            Book Consultation
+            {ctaLabel}
           </a>
+          <div className="about-cta-note">30 minutes with a delivery lead. Leave with next steps and risks identified.</div>
         </div>
       </div>
       <div className="about-alt-timeline">
@@ -38,6 +39,19 @@ export default function AboutSection({ title, copy, items }: AboutSectionProps) 
             </div>
           </div>
         ))}
+      </div>
+      <div className="about-reasons">
+        <div>
+          <h3 style={{ margin: '0 0 6px' }}>Why teams consider switching to River ERP</h3>
+          <p style={{ margin: '0 0 10px', color: 'var(--muted)' }}>
+            Themes we hear from finance, ops, and IT leaders who want a calmer ERP experience.
+          </p>
+        </div>
+        <ul className="about-reasons-list">
+          {reasons.map(reason => (
+            <li key={reason}>{reason}</li>
+          ))}
+        </ul>
       </div>
     </section>
   );

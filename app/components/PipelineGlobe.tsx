@@ -17,7 +17,6 @@ export default function PipelineGlobe({ steps }: PipelineGlobeProps) {
               <li key={step}>{step}</li>
             ))}
           </ul>
-          <div className="pill" style={{ marginTop: 12 }}>One CTA: Book Consultation</div>
         </div>
         <div className="card globe" style={{ position: 'relative' }}>
           <div className="globe-dots" />

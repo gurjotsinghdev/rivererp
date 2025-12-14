@@ -12,6 +12,7 @@ interface HeroProps {
 export default function Hero({ tag, title, copy, ctaLabel, ctaHref, tagline }: HeroProps) {
   return (
     <section className="hero" id="top">
+      {tagline && <div className="hero-tagline">{tagline}</div>}
       {tag && (
         <div className="tag" style={{ marginBottom: 10, justifyContent: 'center' }}>
           {tag}
@@ -19,7 +20,6 @@ export default function Hero({ tag, title, copy, ctaLabel, ctaHref, tagline }: H
       )}
       <h1>{title}</h1>
       <p>{copy}</p>
-      {tagline && <div className="hero-tagline">{tagline}</div>}
       <div className="hero-actions">
         <a className="cta" href={ctaHref} target="_blank" rel="noopener noreferrer">
           {ctaLabel}
