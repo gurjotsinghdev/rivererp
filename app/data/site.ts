@@ -88,6 +88,7 @@ export const faqs = [
 ];
 
 export const aboutHero = {
+  tag: 'About River ERP',
   title: 'Why teams switch to River ERP',
   copy:
     'You already have an ERP. You need clarity, not hype. We design a migration you can see, test with your data, and approve only when it works for finance, ops, and your frontline teams.',
