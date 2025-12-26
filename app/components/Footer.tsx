@@ -37,7 +37,15 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="footer-brand-mark">River ERP</div>
+        <div className="footer-brand">
+          <img
+            className="footer-logo"
+            src="/rivererp-logo.png"
+            alt="RiverERP"
+            width={500}
+            height={200}
+          />
+        </div>
 
         <div className="footer-note">{footerNote}</div>
       </div>

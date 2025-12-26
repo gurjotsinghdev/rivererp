@@ -5,13 +5,14 @@ export default function Nav() {
   return (
     <div className="nav">
       <div className="nav-bar">
-        <Link href="/" className="logo">
-          <div className="logo-mark" aria-hidden>
-            <div className="river" />
-            <div className="river" />
-            <div className="river" />
-          </div>
-          <div>River ERP</div>
+        <Link href="/" className="logo" aria-label="RiverERP home">
+          <img
+            className="logo-img"
+            src="/rivererp-logo.png"
+            alt="RiverERP"
+            width={500}
+            height={200}
+          />
         </Link>
         <div className="nav-right">
           <a className="cta" href={calendlyUrl} target="_blank" rel="noopener noreferrer">

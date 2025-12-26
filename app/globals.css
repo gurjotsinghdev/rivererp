@@ -51,7 +51,7 @@ main {
 .nav-bar {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 16px 22px;
+  padding: 0 22px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,6 +63,12 @@ main {
   align-items: center;
   gap: 10px;
   font-weight: 800;
+}
+
+.logo-img {
+  height: 90px;
+  width: auto;
+  display: block;
 }
 
 .logo-mark {
@@ -874,10 +880,15 @@ main {
   background: rgba(255, 255, 255, 0.08);
 }
 
-.footer-brand-mark {
-  font-size: 44px;
-  font-weight: 800;
-  letter-spacing: -0.04em;
+.footer-brand {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo {
+  height: 135px;
+  width: auto;
+  display: block;
 }
 
 details summary {
@@ -951,6 +962,14 @@ details summary {
   .cta {
     width: 100%;
     justify-content: center;
+  }
+
+  .logo-img {
+    height: 77px;
+  }
+
+  .footer-logo {
+    height: 108px;
   }
 
   .cta-block {
