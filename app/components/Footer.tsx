@@ -1,10 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import { footerColumns, footerNote } from '../data/site';
+import { footerColumns } from '../data/site';
 
 const socials = ['X', 'FB', 'IN', 'YT', 'IG'];
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="footer-bar">
       <div className="footer-inner">
@@ -37,17 +39,12 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="footer-brand">
-          <img
-            className="footer-logo"
-            src="/rivererp-logo.png"
-            alt="RiverERP"
-            width={500}
-            height={200}
-          />
+        <div className="footer-powered">
+          Copyright {currentYear} Powered by{' '}
+          <a href="https://somydigital.com" target="_blank" rel="noopener noreferrer">
+            Somy Digital
+          </a>
         </div>
-
-        <div className="footer-note">{footerNote}</div>
       </div>
     </footer>
   );

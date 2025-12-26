@@ -1,5 +1,4 @@
 import React from 'react';
-import { calendlyUrl } from '../data/site';
 
 interface Item {
   title: string;
@@ -11,22 +10,15 @@ interface AboutSectionProps {
   copy: string;
   items: Item[];
   reasons: string[];
-  ctaLabel?: string;
 }
 
-export default function AboutSection({ title, copy, items, reasons, ctaLabel = 'Get Migration Plan' }: AboutSectionProps) {
+export default function AboutSection({ title, copy, items, reasons }: AboutSectionProps) {
   return (
     <section className="section panel-section about-alt" id="about">
       <div className="about-alt-header">
         <div>
           <h2>{title}</h2>
           <p>{copy}</p>
-        </div>
-        <div className="about-alt-cta top-align">
-          <a className="cta" href={calendlyUrl} target="_blank" rel="noopener noreferrer">
-            {ctaLabel}
-          </a>
-          <div className="about-cta-note">30 minutes with a delivery lead. Leave with next steps and risks identified.</div>
         </div>
       </div>
       <div className="about-alt-timeline">

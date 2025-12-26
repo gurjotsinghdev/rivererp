@@ -355,28 +355,9 @@ main {
   margin-bottom: 12px;
 }
 
-.about-alt-cta {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: flex-end;
-  text-align: right;
-  margin-left: auto;
-  align-self: flex-start;
-}
-
-.about-alt-cta.top-align {
-  justify-content: flex-start;
-}
-
 .about-alt-timeline {
   display: grid;
   gap: 14px;
-}
-
-.about-cta-note {
-  font-size: 13px;
-  color: var(--muted);
 }
 
 .about-reasons {
@@ -647,6 +628,57 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
+.industries-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 1100px) {
+  .industries-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.industry-card {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.industry-card::after {
+  content: '';
+  position: absolute;
+  inset: -40% -30% auto auto;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(15, 23, 42, 0.08), transparent 70%);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.industry-card:hover {
+  transform: translateY(-4px);
+  border-color: #d1d5db;
+  box-shadow: 0 22px 52px rgba(15, 23, 42, 0.12);
+}
+
+.industry-title {
+  margin: 0;
+  font-size: 20px;
+}
+
+
 .pill {
   padding: 8px 10px;
   border-radius: 12px;
@@ -838,11 +870,6 @@ main {
   color: #ffffff;
 }
 
-.footer-note {
-  color: #9ca3af;
-  font-size: 13px;
-}
-
 .footer-cta {
   display: flex;
   align-items: center;
@@ -880,15 +907,15 @@ main {
   background: rgba(255, 255, 255, 0.08);
 }
 
-.footer-brand {
-  display: flex;
-  align-items: center;
+.footer-powered {
+  font-size: 12px;
+  color: #9ca3af;
+  text-align: right;
 }
 
-.footer-logo {
-  height: 135px;
-  width: auto;
-  display: block;
+.footer-powered a {
+  color: #e5e7eb;
+  font-weight: 700;
 }
 
 details summary {
@@ -968,8 +995,21 @@ details summary {
     height: 77px;
   }
 
-  .footer-logo {
-    height: 108px;
+  .industry-card {
+    padding: 16px;
+  }
+
+  .industry-title {
+    font-size: 18px;
+  }
+
+  .industries-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-powered {
+    justify-self: center;
+    text-align: center;
   }
 
   .cta-block {

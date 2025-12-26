@@ -1,8 +1,6 @@
 import Nav from './components/Nav';
 import Hero from './components/Hero';
-import FeatureGrid from './components/FeatureGrid';
-import PricingCards from './components/PricingCards';
-import TestimonialsGrid from './components/TestimonialsGrid';
+import IndustriesGrid from './components/IndustriesGrid';
 import FAQList from './components/FAQList';
 import CTA from './components/CTA';
 import LogoSlider from './components/LogoSlider';
@@ -15,9 +13,6 @@ import {
   aboutCopy,
   industriesList,
   industriesCopy,
-  plans,
-  testimonials,
-  testimonialsCopy,
   faqs,
   logos,
   switchReasons,
@@ -44,7 +39,6 @@ export default function Page() {
           copy={aboutCopy}
           items={aboutFeatures}
           reasons={switchReasons}
-          ctaLabel="Book Demo"
         />
 
         <section className="section panel-section risk-section">
@@ -62,7 +56,7 @@ export default function Page() {
           </a>
         </section>
 
-        <FeatureGrid
+        <IndustriesGrid
           id="industries"
           title="Industries"
           copy="Plugin-ready accelerators for every domain."
@@ -70,9 +64,9 @@ export default function Page() {
           panel
         />
 
-        <TestimonialsGrid quotes={testimonials} copy={testimonialsCopy} />
+        {/* <TestimonialsGrid quotes={testimonials} copy={testimonialsCopy} /> */}
 
-        <PricingCards plans={plans} />
+        {/* <PricingCards plans={plans} /> */}
 
         <FAQList items={faqs} />
 

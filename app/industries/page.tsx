@@ -1,6 +1,6 @@
 import Nav from '../components/Nav';
 import Hero from '../components/Hero';
-import FeatureGrid from '../components/FeatureGrid';
+import IndustriesGrid from '../components/IndustriesGrid';
 import CTA from '../components/CTA';
 import Footer from '../components/Footer';
 import { calendlyUrl, industriesHero, industriesList, industriesCopy } from '../data/site';
@@ -19,7 +19,7 @@ export default function IndustriesPage() {
           ctaLabel={industriesHero.ctaLabel}
           ctaHref={calendlyUrl}
         />
-        <FeatureGrid
+        <IndustriesGrid
           title="Pre-built industry accelerators"
           copy="Preview in a sandbox, adjust with us, then promote only after it fits your numbers."
           items={industryCards}
