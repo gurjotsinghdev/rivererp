@@ -5,7 +5,13 @@ import { motion } from 'framer-motion';
 import { Badge } from '@/app/components/ui/badge';
 import { Button } from '@/app/components/ui/button';
 import { Card } from '@/app/components/ui/card';
-import { ArrowUpRight, ShieldCheck, Sparkles, Timer } from 'lucide-react';
+import {
+  BadgeDollarSign,
+  Globe,
+  GraduationCap,
+  Headset,
+  Puzzle
+} from 'lucide-react';
 import AnchorLink from '@/app/components/AnchorLink';
 
 interface HeroProps {
@@ -18,6 +24,25 @@ interface HeroProps {
   secondaryCtaLabel?: string;
   secondaryCtaHref?: string;
 }
+
+const heroHighlights = [
+  { label: 'Onboarding & training', icon: GraduationCap },
+  { label: 'Customised modules', icon: Puzzle },
+  { label: 'Dedicated support', icon: Headset },
+  { label: 'Affordable & predictable pricing', icon: BadgeDollarSign },
+  { label: 'Multiple industries', icon: Globe }
+];
+
+const launchCard = {
+  eyebrow: 'RiverERP launch snapshot',
+  title: 'Product readiness',
+  badge: 'Launch-ready',
+  stats: [
+    { label: 'Implementation window', value: '6-8 weeks' },
+    { label: 'Implementation coverage', value: '30+ setups' },
+    { label: 'Support coverage', value: '24/7' }
+  ]
+};
 
 export default function Hero({
   tag,
@@ -36,15 +61,12 @@ export default function Hero({
         <div className="space-y-6">
           {tagline && <Badge variant="outline" className="normal-case">{tagline}</Badge>}
           {tag && <p className="text-sm text-muted-foreground">{tag}</p>}
-          <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
-            <span className="text-gradient">{title}</span>
-          </h1>
+          <h1 className="text-4xl font-semibold leading-tight text-foreground sm:text-5xl">{title}</h1>
           <p className="max-w-xl text-base text-muted-foreground sm:text-lg">{copy}</p>
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
             <Button size="lg" variant="glow" asChild>
               <Link href={ctaHref}>
                 {ctaLabel}
-                <ArrowUpRight className="h-4 w-4" />
               </Link>
             </Button>
             {secondaryCtaLabel && secondaryCtaHref && (
@@ -58,18 +80,15 @@ export default function Hero({
             )}
           </div>
           <div className="flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-            <div className="flex items-center gap-2 rounded-full border border-border bg-background/70 px-4 py-2">
-              <ShieldCheck className="h-4 w-4 text-foreground" />
-              Data validation
-            </div>
-            <div className="flex items-center gap-2 rounded-full border border-border bg-background/70 px-4 py-2">
-              <Timer className="h-4 w-4 text-foreground" />
-              6-8 week runway
-            </div>
-            <div className="flex items-center gap-2 rounded-full border border-border bg-background/70 px-4 py-2">
-              <Sparkles className="h-4 w-4 text-foreground" />
-              Premium enablement
-            </div>
+            {heroHighlights.map(item => {
+              const Icon = item.icon;
+              return (
+                <div key={item.label} className="flex items-center gap-2 rounded-full border border-border bg-background/70 px-4 py-2">
+                  <Icon className="h-4 w-4 text-foreground" />
+                  {item.label}
+                </div>
+              );
+            })}
           </div>
         </div>
         <motion.div
@@ -82,24 +101,19 @@ export default function Hero({
           <Card className="relative overflow-hidden border-border/70 bg-card/80 p-8 shadow-depth">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">Launch status</p>
-                <h3 className="mt-2 text-xl font-semibold">Migration command view</h3>
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+                  {launchCard.eyebrow}
+                </p>
+                <h3 className="mt-2 text-xl font-semibold">{launchCard.title}</h3>
               </div>
-              <Badge variant="glow">On track</Badge>
+              <Badge variant="glow">{launchCard.badge}</Badge>
             </div>
             <div className="mt-6 space-y-4">
-              {[
-                { label: 'Sandbox build', value: 'Complete', width: '100%' },
-                { label: 'Data validation', value: '86%', width: '86%' },
-                { label: 'Team enablement', value: '72%', width: '72%' }
-              ].map(item => (
+              {launchCard.stats.map(item => (
                 <div key={item.label} className="rounded-2xl border border-border/70 bg-background/80 p-4">
                   <div className="flex items-center justify-between text-sm font-semibold">
                     <span>{item.label}</span>
                     <span className="text-muted-foreground">{item.value}</span>
-                  </div>
-                  <div className="mt-3 h-2 rounded-full bg-muted">
-                    <div className="h-2 rounded-full bg-primary" style={{ width: item.width }} />
                   </div>
                 </div>
               ))}

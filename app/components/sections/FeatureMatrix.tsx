@@ -13,8 +13,8 @@ export default function FeatureMatrix() {
       <div className="container space-y-10">
         <SectionHeader
           eyebrow="Platform"
-          title="Everything you need to ship RiverERP with confidence"
-          description="Premium delivery, measurable checkpoints, and clear ownership across the entire migration."
+          title="Four reasons enterprise teams choose ERP"
+          description="Custom modules, scale, compliance, and a single source of truth for finance and ops."
         />
         <div className="grid gap-6 md:grid-cols-2">
           {featureHighlights.map((feature, index) => {

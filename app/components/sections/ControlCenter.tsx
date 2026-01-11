@@ -10,8 +10,8 @@ export default function ControlCenter() {
     <section className="py-12 sm:py-16" id="approach">
       <div className="container space-y-10">
         <SectionHeader
-          title="A migration control plane for every milestone"
-          description="Plan, validate, and launch with an operating system that keeps your team aligned."
+          title="Implementation, migration, and operations kept in sync"
+          description="Every phase is visible, owned, and signed off so teams stay aligned."
         />
         <Reveal>
           <Tabs defaultValue={platformTabs[0].id} className="space-y-8">
@@ -46,38 +46,27 @@ export default function ControlCenter() {
                     <div className="relative space-y-6">
                       <div>
                         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-                          Delivery control center
+                          {tab.panel.eyebrow}
                         </p>
-                        <h4 className="mt-2 text-lg font-semibold">Live migration status</h4>
+                        <h4 className="mt-2 text-lg font-semibold">{tab.panel.title}</h4>
                       </div>
                       <div className="grid gap-4">
-                        <div className="rounded-2xl border border-border/70 bg-background/80 p-4">
-                          <div className="flex items-center justify-between text-sm font-semibold">
-                            <span>Data imports</span>
-                            <span>86%</span>
+                        {tab.panel.items.map(item => (
+                          <div key={item.label} className="rounded-2xl border border-border/70 bg-background/80 p-4">
+                            <div className="flex items-center justify-between text-sm font-semibold">
+                              <span>{item.label}</span>
+                              <span className="text-muted-foreground">{item.value}</span>
+                            </div>
+                            {item.detail && (
+                              <div className="mt-3 text-xs text-muted-foreground">{item.detail}</div>
+                            )}
+                            {typeof item.progress === 'number' && (
+                              <div className="mt-3 h-2 rounded-full bg-muted">
+                                <div className="h-2 rounded-full bg-primary" style={{ width: `${item.progress}%` }} />
+                              </div>
+                            )}
                           </div>
-                          <div className="mt-3 h-2 rounded-full bg-muted">
-                            <div className="h-2 w-[86%] rounded-full bg-primary" />
-                          </div>
-                        </div>
-                        <div className="rounded-2xl border border-border/70 bg-background/80 p-4">
-                          <div className="flex items-center justify-between text-sm font-semibold">
-                            <span>Workflow approvals</span>
-                            <span>12 blockers</span>
-                          </div>
-                          <div className="mt-3 text-xs text-muted-foreground">
-                            Finance · Ops · IT
-                          </div>
-                        </div>
-                        <div className="rounded-2xl border border-border/70 bg-background/80 p-4">
-                          <div className="flex items-center justify-between text-sm font-semibold">
-                            <span>Go-live readiness</span>
-                            <span className="text-emerald-600">Green</span>
-                          </div>
-                          <div className="mt-3 text-xs text-muted-foreground">
-                            Final reconciliation complete, stakeholder sign-off collected.
-                          </div>
-                        </div>
+                        ))}
                       </div>
                     </div>
                   </Card>

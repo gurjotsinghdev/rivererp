@@ -11,7 +11,7 @@ export default function Powered({ items }: PoweredProps) {
       <div className="container space-y-10">
         <SectionHeader
           title="Powered by RiverERP"
-          description="Stable foundation with RiverERP implementation speed and opinionated playbooks."
+          description="Stable foundation with RiverERP implementation speed and proven implementations."
         />
         <div className="flex flex-wrap gap-3 rounded-3xl border border-border bg-card/70 p-6 shadow-soft">
           {items.map(item => (

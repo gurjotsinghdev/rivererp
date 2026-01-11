@@ -2,11 +2,6 @@ import Link from 'next/link';
 import AnchorLink from '@/app/components/AnchorLink';
 import { footerColumns, footerNote } from '@/app/data/site';
 
-const socials = [
-  { label: 'Twitter', href: '#' },
-  { label: 'YouTube', href: '#' }
-];
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -43,15 +38,8 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col gap-4 border-t border-border/70 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+        <div className="border-t border-border/70 pt-6 text-center text-xs text-muted-foreground">
           <span>Copyright {currentYear} RiverERP. All rights reserved.</span>
-          <div className="flex gap-3">
-            {socials.map(item => (
-              <Link key={item.label} href={item.href} className="rounded-full border border-border px-3 py-1 text-xs">
-                {item.label}
-              </Link>
-            ))}
-          </div>
         </div>
       </div>
     </footer>

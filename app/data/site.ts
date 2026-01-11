@@ -4,20 +4,19 @@ export const navPhone = '+1 (555) 123-4567';
 export const navLinks = [
   { label: 'Platform', href: '/#platform' },
   { label: 'Approach', href: '/#approach' },
-  { label: 'Industries', href: '/#industries' }
+  { label: 'Process', href: '/#process' },
+  { label: 'Industries', href: '/#industries' },
+  { label: 'FAQ', href: '/#faq' }
 ];
 
 export const logos = [
-  { name: 'The Village Inn', href: 'https://example.com/the-village-inn', city: 'Princeton', country: 'Canada', industry: 'Hospitality' },
   { name: 'Global Grocers', href: 'https://example.com/global-grocers', city: 'Penticton', country: 'Canada', industry: 'Retail' },
-  { name: 'Stargazer Inn and Suites', href: 'https://example.com/stargazer-inn', city: 'Monterey', country: 'USA', industry: 'Hospitality' },
   { name: 'Shuaiba Industrial Company', href: 'https://example.com/shuaiba-industrial', city: 'Dubai', country: 'UAE', industry: 'Manufacturing' },
   { name: 'Memor Perfumes', href: 'https://example.com/memor-perfumes', city: 'Bengaluru', country: 'India', industry: 'Retail' },
   { name: 'CNC', href: 'https://example.com/cnc', city: 'Prince George', country: 'Canada', industry: 'Manufacturing' }
 ];
 
 export const hero = {
-  tag: 'RiverERP is a premium ERP platform and delivery studio for modern teams.',
   title: 'A premium ERP rollout with zero drama and full control.',
   copy:
     'RiverERP moves you from legacy ERP to a modern operating system with a measured plan, sandbox validation, and hands-on enablement. You see every risk, every checkpoint, and the exact numbers before cutover.',
@@ -27,31 +26,31 @@ export const hero = {
 
 export const stats = [
   { value: '6-8 weeks', label: 'Average go-live after sign-off' },
-  { value: '30+ playbooks', label: 'Ready for finance, ops, and compliance' },
+  { value: '30+ modules', label: 'Configured for finance, ops, and compliance' },
   { value: '99.95%', label: 'Reconciliation accuracy target' },
   { value: '24/7', label: 'Go-live monitoring with named leads' }
 ];
 
 export const featureHighlights = [
   {
-    title: 'Migration command center',
-    description: 'Every batch, validation rule, and rollback point is visible and signed off before go-live.',
-    tag: 'Control'
+    title: 'Customised modules',
+    description: 'Configure finance, procurement, inventory, and reporting around the way your teams already work.',
+    tag: 'Fit'
   },
   {
-    title: 'RiverERP accelerators',
-    description: 'Industry-specific modules for education, retail, manufacturing, and multi-entity ops.',
-    tag: 'Speed'
+    title: 'Built for medium to enterprise-level businesses',
+    description: 'Multi-entity, multi-location operations with approvals and visibility without enterprise bloat.',
+    tag: 'Scale'
   },
   {
-    title: 'Security-first governance',
-    description: 'Role-based approvals, audit trails, and access policies baked in from day one.',
-    tag: 'Trust'
+    title: 'Compliance-ready governance',
+    description: 'Audit trails, role-based approvals, and reporting built for regulatory and industry needs.',
+    tag: 'Compliance'
   },
   {
-    title: 'Enablement at scale',
-    description: 'Live training, playbooks, and comms to keep finance, ops, and leadership aligned.',
-    tag: 'Adoption'
+    title: 'Single source of truth',
+    description: 'Unify finance, ops, and leadership data so teams stop reconciling in spreadsheets.',
+    tag: 'Clarity'
   }
 ];
 
@@ -59,58 +58,85 @@ export const platformTabs = [
   {
     id: 'implementation',
     label: 'Implementation',
-    title: 'A rollout blueprint that your exec team can approve.',
-    description: 'Build a clear sequence of milestones, owners, and exit criteria before any data moves.',
+    title: 'Implementation mapped before any data moves.',
+    description: 'Define scope, owners, and acceptance criteria so every team knows what goes live and when.',
     bullets: [
-      'Launch sandbox with your chart of accounts and approval flows.',
-      'Define success metrics and acceptance testing for every team.',
-      'Create a migration scorecard with sign-off checkpoints.'
-    ]
+      'Discovery workshops and process mapping by department.',
+      'Custom module configuration with approvals and roles.',
+      'Implementation plan with week-by-week milestones.'
+    ],
+    panel: {
+      eyebrow: 'Implementation cockpit',
+      title: 'Build readiness',
+      items: [
+        { label: 'Process mapping', value: 'Complete', progress: 100 },
+        { label: 'Module configuration', value: '68%', progress: 68 },
+        { label: 'Stakeholder sign-off', value: 'In review', detail: 'Finance · Ops · IT' }
+      ]
+    }
   },
   {
     id: 'migration',
     label: 'Migration',
-    title: 'Data validation and rollback ready at every stage.',
-    description: 'Move masters and transactions in controlled waves with automated reconciliations.',
+    title: 'Migration rehearsed with your real data.',
+    description: 'Validate masters and transactions in waves with reconciliation before cutover.',
     bullets: [
-      'Stage imports with automated QA and reconciliation checks.',
-      'Parallel-run your current ERP until numbers match.',
-      'Track every exception with named owners and SLAs.'
-    ]
+      'Data cleansing and mapping with test loads.',
+      'Parallel run until totals match and reports align.',
+      'Cutover checklist with rollback options.'
+    ],
+    panel: {
+      eyebrow: 'Migration control',
+      title: 'Cutover readiness',
+      items: [
+        { label: 'Data loads', value: '82%', progress: 82 },
+        { label: 'Reconciliation', value: '12 exceptions', detail: 'AP · Inventory · Projects' },
+        { label: 'Cutover window', value: 'Confirmed', detail: 'Weekend launch scheduled' }
+      ]
+    }
   },
   {
     id: 'operations',
     label: 'Operations',
-    title: 'Post go-live support with a real delivery crew.',
-    description: 'Named leads, performance monitoring, and continuous optimization after launch.',
+    title: 'Operations that stay stable after go-live.',
+    description: 'Dedicated team, monitoring, and optimization after launch.',
     bullets: [
-      'Hypercare plan for the first 45 days post launch.',
-      'Automation coverage for approvals, alerts, and escalations.',
-      'Quarterly optimization sessions with finance and ops.'
-    ]
+      'Hypercare coverage with named leads.',
+      'SLA-based support and ticket triage.',
+      'Quarterly optimization for automation and reporting.'
+    ],
+    panel: {
+      eyebrow: 'Operations desk',
+      title: 'Post-launch stability',
+      items: [
+        { label: 'Hypercare coverage', value: '24/7', detail: 'Named leads on rotation' },
+        { label: 'Ticket SLAs', value: '2 hrs', detail: 'Priority 1 response' },
+        { label: 'Automation wins', value: '8 queued', detail: 'Approvals · Alerts · Reports' }
+      ]
+    }
   }
 ];
 
 export const timeline = [
   {
-    title: 'Discovery and risk capture',
-    detail: 'Document pain points, data quality gaps, and the outcomes leadership needs.'
+    title: 'Discovery and process mapping',
+    detail: 'Capture current workflows, bottlenecks, and success metrics across teams.'
   },
   {
-    title: 'Sandbox build and validation',
-    detail: 'Stand up RiverERP with your workflows and test with sample data.'
+    title: 'Solution design and module configuration',
+    detail: 'Configure custom modules, approvals, and roles to match how you operate.'
   },
   {
-    title: 'Migration rehearsals',
-    detail: 'Run dry migrations, reconcile, and lock the playbook before launch.'
+    title: 'Data cleanup and migration testing',
+    detail: 'Clean master data, run test loads, and reconcile reports before cutover.'
   },
   {
-    title: 'Parallel run and cutover',
-    detail: 'Operate both systems until balance sheets align, then cut over.'
+    title: 'Training and user acceptance',
+    detail: 'Onboarding and training with sign-off from finance, ops, and leadership.'
   },
   {
-    title: 'Hypercare and optimization',
-    detail: 'Dedicated support, automation tuning, and change management follow-through.'
+    title: 'Go-live and hypercare',
+    detail: 'Cutover, monitoring, and dedicated support to stabilise operations.'
   }
 ];
 
@@ -150,10 +176,14 @@ export const integrationStacks = [
 ];
 
 export const faqs = [
-  { q: 'Is this a demo or production?', a: 'Both. Start in demo, promote to production with the same playbook after sign-off.' },
+  { q: 'Is this a demo or production?', a: 'Both. Start in demo, promote to production with the same implementation plan after sign-off.' },
   { q: 'Do you support custom apps and integrations?', a: 'Yes. RiverERP Core plus plugins; we add custom apps, fields, scripts, and integrations.' },
   { q: 'How long to go live?', a: 'Typical go-live is 6-8 weeks after sign-off, including migration and enablement.' },
-  { q: 'What accounts are used?', a: 'Setup uses info.somydigital@gmail.com; demos use rivererp@gmail.com; booking via Calendly only.' }
+  { q: 'What accounts are used?', a: 'Setup uses info.somydigital@gmail.com; demos use rivererp@gmail.com; booking via Calendly only.' },
+  { q: 'Do you offer onboarding and training?', a: 'Yes. We deliver role-based onboarding, team training, and administrator handoffs.' },
+  { q: 'Can you migrate from our current ERP?', a: 'Yes. We handle data mapping, cleansing, test migrations, and parallel runs.' },
+  { q: 'What size businesses do you support?', a: 'We support medium to enterprise-level businesses with multi-entity needs.' },
+  { q: 'Is support included after go-live?', a: 'Yes. Hypercare, SLA-based support, and optimisation are included post-launch.' }
 ];
 
 export const aboutHero = {
@@ -207,11 +237,11 @@ export const industriesList = [
   'IT Services'
 ];
 export const industriesCopy =
-  'Industry playbooks for approvals, billing, inventory, and reporting trialed in a sandbox with your sample data, adjusted together, then promoted only when numbers align.';
+  'Industry implementation plans for approvals, billing, inventory, and reporting trialed in a sandbox with your sample data, adjusted together, then promoted only when numbers align.';
 
 export const casesHero = {
   tag: 'Case studies',
-  title: 'Demo to production playbooks.',
+  title: 'Demo to production implementations.',
   copy: 'Walk through similar migrations to see how risk, data, and support were handled.',
   ctaLabel: 'Request a demo'
 };
@@ -227,22 +257,22 @@ export const testimonials = [
     quote: 'RiverERP handled setup, plugins, and training. Our teams used it day one.',
     name: 'Alex Morgan',
     title: 'COO',
-    company: 'Harbor Inn',
-    href: 'https://example.com/harbor-inn-case'
+    company: 'Global Grocers',
+    href: 'https://example.com/global-grocers'
   },
   {
     quote: 'Predictable rollout, no enterprise bloat. Demo to production in weeks.',
     name: 'Jamie Patel',
-    title: 'Head of Ops',
-    company: 'Grandline Hotel',
-    href: 'https://example.com/grandline-hotel-case'
+    title: 'Operations Director',
+    company: 'Shuaiba Industrial Company',
+    href: 'https://example.com/shuaiba-industrial'
   },
   {
     quote: 'Single CTA via Calendly made stakeholder engagement easy.',
     name: 'Taylor Chen',
     title: 'Program Lead',
-    company: 'Vista Suites',
-    href: 'https://example.com/vista-suites-case'
+    company: 'Memor Perfumes',
+    href: 'https://example.com/memor-perfumes'
   }
 ];
 export const testimonialsCopy = 'Straightforward notes from teams about what improved after switching and what took work.';
@@ -260,8 +290,8 @@ export const footerColumns = [
     heading: 'Product',
     links: [
       { label: 'RiverERP platform', href: '/#platform' },
-      { label: 'Accelerators', href: '/#platform' },
-      { label: 'Industries', href: '/industries' },
+      { label: 'Approach', href: '/#approach' },
+      { label: 'Process', href: '/#process' },
       { label: 'Book Consultation', href: '/book-consultation' }
     ]
   },
@@ -271,16 +301,15 @@ export const footerColumns = [
       { label: 'About', href: '/about' },
       { label: 'Case studies', href: '/cases' },
       { label: 'Testimonials', href: '/testimonials' },
-      { label: 'Contact', href: '/#footer' }
+      { label: 'Contact', href: '/contact' }
     ]
   },
   {
     heading: 'Resources',
     links: [
       { label: 'FAQ', href: '/#faq' },
-      { label: 'Demo tenant', href: '#' },
-      { label: 'Governance', href: '#' },
-      { label: 'Security', href: '#' }
+      { label: 'Privacy policy', href: '/privacy-policy' },
+      { label: 'Terms & conditions', href: '/terms' }
     ]
   }
 ];

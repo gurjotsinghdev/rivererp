@@ -5,11 +5,11 @@ import { timeline } from '@/app/data/site';
 
 export default function ProcessTimeline() {
   return (
-    <section className="py-12 sm:py-16">
+    <section className="py-12 sm:py-16" id="process">
       <div className="container grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
         <SectionHeader
-          title="A clear migration runway"
-          description="Every phase has defined outcomes so finance, ops, and IT are never guessing."
+          title="Step-by-step ERP implementation"
+          description="Five clear stages from discovery to hypercare so teams are never guessing."
         />
         <div className="space-y-4">
           {timeline.map((step, index) => (
