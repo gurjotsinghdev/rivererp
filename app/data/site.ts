@@ -13,7 +13,8 @@ export const logos = [
   { name: 'Global Grocers', href: 'https://example.com/global-grocers', city: 'Penticton', country: 'Canada', industry: 'Retail' },
   { name: 'Shuaiba Industrial Company', href: 'https://example.com/shuaiba-industrial', city: 'Dubai', country: 'UAE', industry: 'Manufacturing' },
   { name: 'Memor Perfumes', href: 'https://example.com/memor-perfumes', city: 'Bengaluru', country: 'India', industry: 'Retail' },
-  { name: 'CNC', href: 'https://example.com/cnc', city: 'Prince George', country: 'Canada', industry: 'Manufacturing' }
+  { name: 'CNC', href: 'https://example.com/cnc', city: 'Prince George', country: 'Canada', industry: 'Manufacturing' },
+  { name: 'Somy Digital', href: 'https://example.com/somy-digital', city: 'Vancouver', country: 'Canada', industry: 'IT Services' }
 ];
 
 export const hero = {

@@ -20,7 +20,6 @@ export default function Page() {
           title={hero.title}
           copy={hero.copy}
           tagline={hero.tagline}
-          tag={hero.tag}
           ctaLabel={hero.ctaLabel}
           ctaHref={calendlyUrl}
         />
