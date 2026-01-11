@@ -1,4 +1,5 @@
-import React from 'react';
+import SectionHeader from '@/app/components/SectionHeader';
+import { Card } from '@/app/components/ui/card';
 
 interface FeatureCard {
   title: string;
@@ -14,19 +15,24 @@ interface FeatureGridProps {
   panel?: boolean;
 }
 
-export default function FeatureGrid({ title, copy, items, id, panel }: FeatureGridProps) {
+export default function FeatureGrid({ title, copy, items, id }: FeatureGridProps) {
   return (
-    <section className={`section${panel ? ' panel-section' : ''}`} id={id}>
-      <h2>{title}</h2>
-      <p>{copy}</p>
-      <div className="feature-grid">
-        {items.map(card => (
-          <div className="card" key={card.title}>
-            {card.tag && <div className="tag">{card.tag}</div>}
-            <h3 style={{ margin: '10px 0 6px' }}>{card.title}</h3>
-            <p style={{ margin: 0, color: 'var(--muted)' }}>{card.description}</p>
-          </div>
-        ))}
+    <section className="py-16" id={id}>
+      <div className="container space-y-10">
+        <SectionHeader title={title} description={copy} />
+        <div className="grid gap-6 md:grid-cols-2">
+          {items.map(card => (
+            <Card key={card.title} className="border-border/70 p-6">
+              {card.tag && (
+                <span className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+                  {card.tag}
+                </span>
+              )}
+              <h3 className="mt-3 text-lg font-semibold">{card.title}</h3>
+              <p className="mt-3 text-sm text-muted-foreground">{card.description}</p>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );

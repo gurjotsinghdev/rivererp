@@ -1,9 +1,9 @@
-import Nav from '../components/Nav';
-import Hero from '../components/Hero';
-import FeatureGrid from '../components/FeatureGrid';
-import CTA from '../components/CTA';
-import Footer from '../components/Footer';
-import { calendlyUrl, casesHero, cases, casesCopy } from '../data/site';
+import Nav from '@/app/components/Nav';
+import Hero from '@/app/components/Hero';
+import FeatureGrid from '@/app/components/FeatureGrid';
+import CTA from '@/app/components/CTA';
+import Footer from '@/app/components/Footer';
+import { calendlyUrl, casesHero, cases, casesCopy } from '@/app/data/site';
 
 const caseCards = cases.map(item => ({ title: item.title, description: item.detail }));
 
@@ -20,7 +20,7 @@ export default function CasesPage() {
           ctaHref={calendlyUrl}
         />
         <FeatureGrid title="Recent work" copy={casesCopy} items={caseCards} />
-        <CTA label="Review a similar migration" href={calendlyUrl} />
+        <CTA label="Book Consultation" href={calendlyUrl} />
       </main>
       <Footer />
     </>

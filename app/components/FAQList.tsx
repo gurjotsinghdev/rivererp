@@ -1,4 +1,7 @@
-import React from 'react';
+'use client';
+
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/app/components/ui/accordion';
+import SectionHeader from '@/app/components/SectionHeader';
 
 interface FAQItem {
   q: string;
@@ -11,15 +14,21 @@ interface FAQListProps {
 
 export default function FAQList({ items }: FAQListProps) {
   return (
-    <section className="section">
-      <h2>FAQ</h2>
-      <div className="grid">
-        {items.map(item => (
-          <details key={item.q} className="card">
-            <summary>{item.q}</summary>
-            <p style={{ marginTop: 8, color: 'var(--muted)' }}>{item.a}</p>
-          </details>
-        ))}
+    <section className="py-12 sm:py-16" id="faq">
+      <div className="container space-y-10">
+        <SectionHeader
+          eyebrow="FAQ"
+          title="Clear answers before you move"
+          description="Everything you need to know before starting a migration."
+        />
+        <Accordion type="single" collapsible className="rounded-3xl border border-border bg-card/70 px-6">
+          {items.map(item => (
+            <AccordionItem key={item.q} value={item.q}>
+              <AccordionTrigger>{item.q}</AccordionTrigger>
+              <AccordionContent>{item.a}</AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
     </section>
   );

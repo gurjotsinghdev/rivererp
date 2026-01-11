@@ -1,9 +1,9 @@
-import Nav from '../components/Nav';
-import Hero from '../components/Hero';
-import TestimonialsGrid from '../components/TestimonialsGrid';
-import CTA from '../components/CTA';
-import Footer from '../components/Footer';
-import { calendlyUrl, testimonialsHero, testimonialsPage, testimonialsCopy } from '../data/site';
+import Nav from '@/app/components/Nav';
+import Hero from '@/app/components/Hero';
+import TestimonialsGrid from '@/app/components/TestimonialsGrid';
+import CTA from '@/app/components/CTA';
+import Footer from '@/app/components/Footer';
+import { calendlyUrl, testimonialsHero, testimonialsPage, testimonialsCopy } from '@/app/data/site';
 
 export default function TestimonialsPage() {
   return (
@@ -18,7 +18,7 @@ export default function TestimonialsPage() {
           ctaHref={calendlyUrl}
         />
         <TestimonialsGrid quotes={testimonialsPage} copy={testimonialsCopy} />
-        <CTA label="Talk through your migration risks" href={calendlyUrl} />
+        <CTA label="Book Consultation" href={calendlyUrl} />
       </main>
       <Footer />
     </>

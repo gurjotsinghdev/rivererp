@@ -1,4 +1,5 @@
-import React from 'react';
+import SectionHeader from '@/app/components/SectionHeader';
+import { Card } from '@/app/components/ui/card';
 
 interface Item {
   title: string;
@@ -14,36 +15,35 @@ interface AboutSectionProps {
 
 export default function AboutSection({ title, copy, items, reasons }: AboutSectionProps) {
   return (
-    <section className="section panel-section about-alt" id="about">
-      <div className="about-alt-header">
-        <div>
-          <h2>{title}</h2>
-          <p>{copy}</p>
-        </div>
-      </div>
-      <div className="about-alt-timeline">
-        {items.map((item, idx) => (
-          <div className="about-step" key={item.title}>
-            <div className="about-step-icon">{idx + 1}</div>
-            <div>
-              <h3 style={{ margin: '0 0 4px' }}>{item.title}</h3>
-              <p style={{ margin: 0, color: 'var(--muted)' }}>{item.description}</p>
-            </div>
+    <section className="py-16" id="about">
+      <div className="container space-y-10">
+        <SectionHeader title={title} description={copy} />
+        <div className="grid gap-6 lg:grid-cols-2">
+          <div className="space-y-4">
+            {items.map((item, index) => (
+              <Card key={item.title} className="flex gap-4 border-border/70 p-5">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">
+                  {index + 1}
+                </div>
+                <div>
+                  <h3 className="text-base font-semibold">{item.title}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{item.description}</p>
+                </div>
+              </Card>
+            ))}
           </div>
-        ))}
-      </div>
-      <div className="about-reasons">
-        <div>
-          <h3 style={{ margin: '0 0 6px' }}>Why teams consider switching to River ERP</h3>
-          <p style={{ margin: '0 0 10px', color: 'var(--muted)' }}>
-            Themes we hear from finance, ops, and IT leaders who want a calmer ERP experience.
-          </p>
+          <Card className="border-border/70 p-6">
+            <h3 className="text-lg font-semibold">Why teams consider switching to RiverERP</h3>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Themes we hear from finance, ops, and IT leaders who want a calmer ERP experience.
+            </p>
+            <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
+              {reasons.map(reason => (
+                <li key={reason}>- {reason}</li>
+              ))}
+            </ul>
+          </Card>
         </div>
-        <ul className="about-reasons-list">
-          {reasons.map(reason => (
-            <li key={reason}>{reason}</li>
-          ))}
-        </ul>
       </div>
     </section>
   );

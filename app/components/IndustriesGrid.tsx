@@ -1,4 +1,5 @@
-import React from 'react';
+import SectionHeader from '@/app/components/SectionHeader';
+import { Card } from '@/app/components/ui/card';
 
 interface IndustryCard {
   title: string;
@@ -13,17 +14,19 @@ interface IndustriesGridProps {
   panel?: boolean;
 }
 
-export default function IndustriesGrid({ title, copy, items, id, panel }: IndustriesGridProps) {
+export default function IndustriesGrid({ title, copy, items, id }: IndustriesGridProps) {
   return (
-    <section className={`section industries-section${panel ? ' panel-section' : ''}`} id={id}>
-      <h2>{title}</h2>
-      <p>{copy}</p>
-      <div className="industries-grid">
-        {items.map(item => (
-          <article className="industry-card" key={item.title}>
-            <h3 className="industry-title">{item.title}</h3>
-          </article>
-        ))}
+    <section className="py-16" id={id}>
+      <div className="container space-y-10">
+        <SectionHeader title={title} description={copy} />
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {items.map(item => (
+            <Card key={item.title} className="border-border/70 p-6 text-center">
+              <h3 className="text-base font-semibold">{item.title}</h3>
+              {item.description && <p className="mt-2 text-xs text-muted-foreground">{item.description}</p>}
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );

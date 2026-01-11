@@ -1,4 +1,5 @@
-import React from 'react';
+import SectionHeader from '@/app/components/SectionHeader';
+import { Card } from '@/app/components/ui/card';
 
 interface Testimonial {
   quote: string;
@@ -15,37 +16,23 @@ interface TestimonialsGridProps {
 
 export default function TestimonialsGrid({ quotes, copy }: TestimonialsGridProps) {
   return (
-    <section className="section" id="testimonials">
-      <h2>Testimonials</h2>
-      {copy && <p>{copy}</p>}
-      <div className="testimonial-grid">
-        {quotes.map((item, idx) => (
-          <div
-            className={`testimonial-card static${idx === 1 ? ' offset' : ''}`}
-            key={item.quote}
-            style={{ animationDelay: `${idx * 120}ms` }}
-          >
-            <div className="accent-line" />
-            <div style={{ color: 'var(--muted)', fontWeight: 700 }}>
-              {item.name} · {item.title}
-            </div>
-            <p style={{ margin: '10px 0 0', color: 'var(--muted)', fontWeight: 600 }}>{item.quote}</p>
-            {item.href ? (
-              <a
-                className="pill"
-                style={{ marginTop: 12, display: 'inline-flex', alignItems: 'center', gap: 6 }}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {item.company} · View case
-              </a>
-            ) : (
-          <div className="pill" style={{ marginTop: 12 }}>{item.company}</div>
-        )}
+    <section className="py-16" id="testimonials">
+      <div className="container space-y-10">
+        <SectionHeader title="Testimonials" description={copy} />
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {quotes.map(item => (
+            <Card key={item.quote} className="border-border/70 p-6">
+              <p className="text-sm text-muted-foreground">{item.quote}</p>
+              <div className="mt-6 text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+                {item.name} - {item.title}
+              </div>
+              <div className="mt-2 text-sm font-semibold text-foreground">
+                {item.company}
+              </div>
+            </Card>
+          ))}
+        </div>
       </div>
-    ))}
-  </div>
     </section>
   );
 }

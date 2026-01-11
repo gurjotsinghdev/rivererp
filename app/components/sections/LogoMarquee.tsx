@@ -1,21 +1,16 @@
-interface LogoItem {
-  name: string;
-  href: string;
-  city: string;
-  country: string;
-  industry: string;
-}
+import { logos } from '@/app/data/site';
 
-interface LogoSliderProps {
-  logos: LogoItem[];
-}
-
-export default function LogoSlider({ logos }: LogoSliderProps) {
+export default function LogoMarquee() {
   const items = [...logos, ...logos];
 
   return (
-    <section className="py-10">
-      <div className="relative overflow-hidden">
+    <section className="py-8 sm:py-10">
+      <div className="container">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+          Trusted by teams modernizing ERP operations
+        </p>
+      </div>
+      <div className="relative mt-6 overflow-hidden">
         <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent" />
         <div className="flex w-max animate-marquee gap-4 motion-reduce:animate-none hover:[animation-play-state:paused]">
